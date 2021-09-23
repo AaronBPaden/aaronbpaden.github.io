@@ -1,0 +1,98 @@
+/* global section */
+
+:root {
+    --primary: #f1f1a1;
+    --secondary: #5360b4;
+    /* TODO: replace this with a google fonts version. */
+    --font: "Lato"
+}
+
+/* We'll set this as needed rather than relying on the default values. */
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    font: var(--font);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* about section */
+
+.landing-main {
+    position: relative;
+    height: 100vh;
+}
+
+.about-box {
+    /* see https://stackoverflow.com/questions/485827/css-100-height-with-padding-margin */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 2rem;
+    padding: 2rem;
+    height: auto;
+    background: var(--primary);
+    color: black;
+    /* see: https://stackoverflow.com/questions/31149144/how-to-use-clip-path-with-text-inside-the-div */
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    height: 10vh;
+}
+
+.about-header img {
+    display: inline;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.about-header h1 {
+    display: inline;
+    /* see: https://css-tricks.com/simplified-fluid-typography/ */
+    font-size: clamp(1.5rem, 1rem + 2vw, 6rem);
+}
+
+.about-text {
+    font-size: clamp(1rem, 1rem + 1vw, 3rem);
+}
+
+.triangle-border {
+    float: right;
+    width: 100vw;
+    height: 70vh;
+    /* this resource helped: https://www.youtube.com/watch?v=sifXs4XVK7g */
+    /* shape-outside: polygon(5.49% 96.56%, 5.49% 96.56%, 84.98% -11.59%); */
+    shape-outside: polygon(5.54% 96.56%, 5.54% 99.33%, 87.27% -10.80%);
+    shape-margin: 2rem;
+}
+
+.about-nav {
+    position: absolute;
+    bottom: 20vh;
+    right: 20vw;
+}
+
+.about-nav a {
+    color: white;
+    font-size: clamp(1.5rem, 1rem + 2vw, 6rem);
+}
+
+.about-nav a:hover {
+    color: var(--secondary);
+}
+
