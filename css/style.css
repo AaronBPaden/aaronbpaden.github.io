@@ -44,7 +44,8 @@ ul {
 }
 
 .about-text {
-    display: none;
+    visibility: hidden;
+    padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -63,7 +64,7 @@ ul {
     }
 
     .about-text {
-        display: block;
+        visibility: visible;
     }
 }
 
