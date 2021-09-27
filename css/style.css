@@ -34,7 +34,12 @@ ul {
 
 .hero-header {
     position: relative;
-    height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .hero-header {
+        height: 100vh;
+    }
 }
 
 .about-box {
