@@ -22,7 +22,7 @@ h3 {
 body {
     background: black;
     color: white;
-    font: var(--font);
+    font-family: var(--font);
 }
 
 ul {
@@ -30,10 +30,120 @@ ul {
     padding: 0;
 }
 
+/* header section */
+
+.header {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.header-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: black;
+}
+
+.about-header {
+    padding: 1rem;
+    width: 100%;
+    background: var(--primary);
+}
+
+@media (min-width: 768px) {
+    .triangle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        /* This works around an issue where about-header visibly extends 1px beyond the triangle. */
+        bottom: -1px;
+        background: var(--primary);
+        clip-path: polygon(0% 0%, 0% 100%, 30% 100%, 40% 0%, 40% 0%)
+    }
+    .header {
+        background: black;
+    }
+    .header-content {
+        margin: auto;
+        width: 90vw;
+    }
+    .about-header {
+        width: auto;
+    }
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    color: gray;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
+}
+
+.header-nav a {
+    color: white;
+}
+
+.header-nav a:hover {
+    color: var(--secondary);
+}
+
+.header-content .nav {
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .header-nav {
+        margin-top: 0;
+    }
+
+    .header-nav,
+    .header-nav .nav-item {
+        width: auto;
+    }
+
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header-content .nav {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.header h1 {
+    display: inline;
+    /* see: https://css-tricks.com/simplified-fluid-typography/ */
+    font-size: clamp(1.5rem, 1rem + 2vw, 6rem);
+}
+
+.nav .nav-item {
+    margin-right: 1rem;
+}
+
+.nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav .btn:hover {
+    filter: grayscale(50%);
+}
+
 /* about section */
 
 .hero-header {
     position: relative;
+    background: black;
 }
 
 @media (min-width: 768px) {
@@ -43,19 +153,21 @@ ul {
 }
 
 .about-box {
-    background: var(--primary);
-    color: black;
     padding: 1rem;
     height: 15vh;
     margin-bottom: 2rem;
+    background: var(--primary);
+    color: black;
     overflow: hidden;
     transition-property: height;
     transition-duration: 1s;
 }
 
 .about-text {
+    margin-top: 3rem;
+    font-size: clamp(1rem, 1rem + 1vw, 3rem);
+    /* font-size: 5rem; */
     visibility: hidden;
-    padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -82,7 +194,6 @@ ul {
     display: flex;
     align-items: center;
     height: 10vh;
-    margin-bottom: 1rem;
 }
 
 .about-header button {
@@ -91,26 +202,10 @@ ul {
     font-style: bold;
 }
 
-@media (min-width: 768px) {
-    .about-header {
-        margin-bottom: 3rem;
-    }
-}
-
 .about-header img {
     display: inline;
     height: 80%;
     border-radius: 50%;
-}
-
-.about-header h1 {
-    display: inline;
-    /* see: https://css-tricks.com/simplified-fluid-typography/ */
-    font-size: clamp(1.5rem, 1rem + 2vw, 6rem);
-}
-
-.about-text {
-    font-size: clamp(1rem, 1rem + 1vw, 3rem);
 }
 
 @media (min-width: 768px) {
@@ -153,7 +248,7 @@ ul {
 /* projects section */
 
 .main {
-    width: 80vw;
+    width: 90vw;
     margin: auto;
 }
 
@@ -193,10 +288,63 @@ ul {
     margin-top: 1rem;
 }
 
+/* main section */
+
+.main-content-box {
+    padding: 1rem;
+    background: var(--secondary);
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .main-content-box {
+        padding: 2rem;
+    }
+}
+
+.main-content-box h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: clamp(1.5rem, 1rem + 2vw, 6rem);
+    font-weight: bold;
+}
+
+.main-content-box h3 {
+    margin: 3rem 0;
+    font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
+    font-weight: bold;
+}
+
+.socials img {
+    margin-right: 1rem;
+    width: 3rem;
+    filter: invert(100%);
+}
+.socials img:hover {
+    filter: invert(80%);
+}
+
+.main-content-box input:focus,
+.main-content-box textarea:focus {
+    outline: 3px solid var(--primary);
+}
+
+.submit-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-box > .btn {
+    background: var(--primary);
+    color: black;
+    font-weight: bold;
+}
+
+
 /* footer section */
 
 .footer {
-    width: 80vw;
+    width: 90vw;
     margin: auto;
     padding: 1rem 0;
     text-align: right;
