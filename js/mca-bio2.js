@@ -8,12 +8,9 @@ document.querySelector("#aboutButton").addEventListener("click", () => {
     aboutText.style.visibility = getComputedStyle(aboutText).visibility === "hidden" ? "visible" : "hidden";
     aboutButton.textContent = aboutButton.textContent === "↑" ? "↓" : "↑";
 
-    // CSS transitions require a static height, so we need to calculate it.
-    let expandedHeight = aboutText.clientHeight + aboutBox.clientHeight;
-
     // It seems the style property only keeps track of inline styles, so we need to check for an
     // empty style as well.
-    aboutBox.style.height = aboutBox.style.height === "" ? expandedHeight + "px"
-        : aboutBox.style.height === "15vh" ? expandedHeight + "px"
+    aboutBox.style.height = aboutBox.style.height === "" ? aboutBox.scrollHeight + "px"
+        : aboutBox.style.height === "15vh" ? aboutBox.scrollHeight + "px"
         : "15vh";
 });
