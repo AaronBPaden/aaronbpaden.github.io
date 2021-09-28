@@ -2,7 +2,7 @@
 
 :root {
     --primary: #f1f1a1;
-    --secondary: #5360b4;
+    --secondary: #343D8D;
     /* TODO: replace this with a google fonts version. */
     --font: "Lato"
 }
@@ -181,7 +181,7 @@ ul {
 .project-card {
     padding: 1rem;
     border: 6px solid var(--primary);
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .project-card img {
