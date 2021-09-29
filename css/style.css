@@ -47,6 +47,7 @@ ul {
 }
 
 .about-header {
+    display: flex;
     padding: 1rem;
     width: 100%;
     background: var(--primary);
