@@ -48,8 +48,10 @@ ul {
 
 .about-header {
     display: flex;
+    align-items: center;
     padding: 1rem;
     width: 100%;
+    height: 10vh;
     background: var(--primary);
 }
 
@@ -191,15 +193,9 @@ ul {
     }
 }
 
-.about-header {
-    display: flex;
-    align-items: center;
-    height: 10vh;
-}
-
 .about-header button {
     margin: auto;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-style: bold;
 }
 
