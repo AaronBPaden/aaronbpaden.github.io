@@ -3,8 +3,7 @@
 :root {
     --primary: #f1f1a1;
     --secondary: #343D8D;
-    /* TODO: replace this with a google fonts version. */
-    --font: "Lato"
+    --font: 'Lato', sans-serif;
 }
 
 html {
