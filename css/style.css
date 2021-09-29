@@ -340,6 +340,23 @@ ul {
     font-weight: bold;
 }
 
+.cert-carousel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cert-carousel > button {
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+.cert-carousel > button:hover {
+    color: var(--primary);
+}
+
+.cert-carousel > button:active {
+    outline-color: var(--primary);
+}
 
 /* footer section */
 
