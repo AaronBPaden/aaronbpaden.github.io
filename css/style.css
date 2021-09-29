@@ -356,6 +356,10 @@ ul {
     outline-color: var(--primary);
 }
 
+.cert-carousel img {
+    margin: auto;
+}
+
 /* footer section */
 
 .footer {
