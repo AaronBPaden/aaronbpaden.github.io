@@ -215,7 +215,8 @@ ul {
         height: 70vh;
         /* this resource helped: https://www.youtube.com/watch?v=sifXs4XVK7g */
         /* shape-outside: polygon(5.49% 96.56%, 5.49% 96.56%, 84.98% -11.59%); */
-        shape-outside: polygon(5.54% 96.56%, 5.54% 99.33%, 87.27% -10.80%);
+        /* shape-outside: polygon(5.54% 96.56%, 5.54% 99.33%, 87.27% -10.80%); */
+        shape-outside: polygon(6.11% 102.07%, 5.49% 107.45%, 90.24% -5.87%);
         shape-margin: 2rem;
     }
 }
