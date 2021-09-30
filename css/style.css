@@ -348,8 +348,15 @@ ul {
     font-size: 2rem;
     color: white;
 }
-.cert-carousel > button:hover {
+.cert-carousel > .btn:hover {
     color: var(--primary);
+}
+
+/* Thanks to Jordan Wallace for reminding us of all of these while debugging */
+.cert-carousel > .btn:hover,
+.cert-carousel > .btn:active,
+.cert-carousel > .btn:focus {
+        outline: 2px solid var(--primary);
 }
 
 .cert-carousel > button:active {
