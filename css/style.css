@@ -277,6 +277,10 @@ ul {
     background: black;
 }
 
+a .project-card {
+    color: white;
+}
+
 .project-card img {
     width: 100%;
 }
