@@ -290,9 +290,22 @@ a .project-card {
     margin-top: 1rem;
 }
 
+.to-top {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+.to-top:hover {
+    color: var(--primary);
+}
+
 /* main section */
 
 .main-content-box {
+    position: relative;
     padding: 1rem;
     background: var(--secondary);
     border-radius: 10px;
