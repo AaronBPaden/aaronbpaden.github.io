@@ -330,6 +330,10 @@ a .project-card {
     font-weight: bold;
 }
 
+.main-content-box p {
+    font-size: 1.5rem;
+}
+
 .socials img {
     margin-right: 1rem;
     width: 3rem;
