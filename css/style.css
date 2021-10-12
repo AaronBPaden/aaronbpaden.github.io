@@ -77,6 +77,14 @@ ul {
     }
 }
 
+.about-header a {
+    color: black;
+}
+
+.about-header a:hover {
+    color: var(--secondary);
+}
+
 .header-nav {
     display: flex;
     flex-direction: column;
